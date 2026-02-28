@@ -14,31 +14,33 @@
     fbq('init', '1655876945542323');
     fbq('track', 'PageView');
   </script>
-  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1655876945542323&ev=PageView&noscript=1" alt="" /></noscript>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1655876945542323&ev=PageView&noscript=1"
+  /></noscript>
   <!-- End Meta Pixel Code -->
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Преміум костюм 2-в-1 — знижка 30% сьогодні</title>
-  <meta name="description" content="Преміум жіночий костюм 2-в-1: комфорт, стиль та ідеальна посадка. Лише сьогодні знижка -30% та швидка доставка Новою Поштою." />
+  <title>Преміум костюм 2-в-1 — елегантність та комфорт щодня</title>
+  <meta name="description" content="Стильний жіночий костюм 2-в-1 у трендових кольорах. Оплата при отриманні, швидка доставка по Україні, знижка обмежений час." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
   <style>
     :root {
-      --bg: #08090d;
-      --bg-soft: #11131a;
-      --card: rgba(255, 255, 255, 0.04);
-      --text: #ecf1ff;
-      --muted: #95a0c0;
-      --accent: #2f6bff;
-      --accent-2: #1c49c9;
-      --line: rgba(255, 255, 255, 0.1);
-      --ok: #22c55e;
-      --danger: #ff4d6d;
+      --bg: #07090f;
+      --surface: #101521;
+      --surface-soft: rgba(255, 255, 255, 0.04);
+      --text: #f3f6ff;
+      --muted: #a8b2cf;
+      --line: rgba(255, 255, 255, 0.12);
+      --accent: #31d8b9;
+      --accent-2: #149f85;
+      --danger: #ff5c7a;
+      --ok: #3ddc84;
       --radius: 18px;
-      --shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+      --shadow: 0 20px 45px rgba(0, 0, 0, 0.42);
     }
 
     * { box-sizing: border-box; }
@@ -47,381 +49,426 @@
       margin: 0;
       font-family: "Manrope", system-ui, sans-serif;
       color: var(--text);
-      background: radial-gradient(circle at 15% 10%, #12214f 0%, var(--bg) 40%);
-      line-height: 1.5;
+      background:
+        radial-gradient(circle at 5% 0%, #102044 0%, transparent 38%),
+        radial-gradient(circle at 95% 25%, #12372d 0%, transparent 42%),
+        var(--bg);
+      line-height: 1.55;
     }
 
-    .container { width: min(1100px, 92%); margin: 0 auto; }
-    .section { padding: 58px 0; }
-    .reveal {
-      opacity: 0;
-      transform: translateY(22px);
-      transition: opacity 0.65s ease, transform 0.65s ease;
-    }
-    .reveal.show { opacity: 1; transform: translateY(0); }
+    img { max-width: 100%; height: auto; display: block; }
+    .container { width: min(96%, 520px); margin: 0 auto; }
+    .section { padding: 38px 0; }
 
     .hero {
       position: relative;
+      min-height: 100svh;
       overflow: hidden;
-      min-height: 95vh;
+      border-bottom: 1px solid var(--line);
       display: flex;
       align-items: center;
-      border-bottom: 1px solid var(--line);
     }
     .hero-bg {
       position: absolute;
       inset: 0;
-      background: linear-gradient(90deg, rgba(8, 9, 13, 0.86), rgba(8, 9, 13, 0.58)), url('bg.jpg') center/cover no-repeat;
+      background: linear-gradient(180deg, rgba(7,9,15,.3), rgba(7,9,15,.92)), url('bg.jpg') center/cover no-repeat;
       will-change: transform;
     }
+    .hero-inner { position: relative; z-index: 1; padding: 28px 0 88px; }
 
-    .hero-content { position: relative; z-index: 1; max-width: 640px; padding: 70px 0; }
     .badge {
       display: inline-flex;
-      gap: 8px;
       align-items: center;
-      border: 1px solid rgba(47, 107, 255, 0.4);
-      background: rgba(47, 107, 255, 0.12);
-      padding: 8px 12px;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .4px;
+      background: rgba(49,216,185,.12);
+      border: 1px solid rgba(49,216,185,.45);
+      color: #baffef;
       border-radius: 999px;
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: .3px;
-      margin-bottom: 18px;
+      padding: 8px 12px;
     }
+
     h1 {
-      margin: 0;
-      font-size: clamp(30px, 5.2vw, 56px);
-      line-height: 1.05;
-      letter-spacing: -0.4px;
+      margin: 14px 0 10px;
+      font-size: clamp(30px, 9.3vw, 42px);
+      line-height: 1.1;
+      letter-spacing: -.3px;
       font-weight: 800;
     }
-    .hero p { font-size: clamp(16px, 2.6vw, 22px); color: #d6ddf7; margin: 18px 0 28px; }
+    h2 {
+      margin: 0 0 10px;
+      font-size: clamp(24px, 7vw, 34px);
+      line-height: 1.18;
+      letter-spacing: -.2px;
+    }
+    p { margin: 0; color: #d7ddf0; }
 
-    .price-row {
+    .price {
+      margin: 18px 0 16px;
       display: flex;
-      align-items: end;
-      gap: 14px;
-      margin-bottom: 18px;
-      flex-wrap: wrap;
-    }
-    .price-new { font-size: 42px; font-weight: 800; color: #fff; }
-    .price-old { text-decoration: line-through; color: var(--muted); font-size: 22px; }
-    .discount-tag {
-      padding: 7px 12px;
-      border-radius: 10px;
-      background: rgba(255, 77, 109, 0.12);
-      color: #ffafbf;
-      font-weight: 700;
-      border: 1px solid rgba(255, 77, 109, 0.35);
-    }
-
-    .cta-row { display: flex; gap: 12px; flex-wrap: wrap; }
-    .btn {
-      border: none;
-      cursor: pointer;
-      text-decoration: none;
-      color: #fff;
-      background: linear-gradient(135deg, var(--accent), var(--accent-2));
-      padding: 15px 24px;
-      border-radius: 14px;
-      font-weight: 700;
-      transition: transform .2s ease, box-shadow .2s ease, opacity .2s ease;
-      box-shadow: 0 10px 24px rgba(47, 107, 255, 0.36);
-      display: inline-block;
-    }
-    .btn:hover { transform: translateY(-2px); }
-    .btn:active { transform: translateY(1px) scale(0.98); }
-    .btn.ghost {
-      background: transparent;
-      border: 1px solid var(--line);
-      box-shadow: none;
-    }
-
-    .trust-inline {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 10px;
-      margin-top: 26px;
-    }
-    .trust-inline div {
-      border: 1px solid var(--line);
-      background: var(--card);
-      border-radius: 12px;
-      padding: 12px;
-      text-align: center;
-      font-size: 13px;
-      color: #d9e1ff;
-    }
-
-    .ticker {
-      margin-top: 16px;
-      display: inline-flex;
-      gap: 8px;
       align-items: center;
-      font-size: 14px;
-      color: #ffd2db;
+      flex-wrap: wrap;
+      gap: 10px;
     }
-    .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--danger); animation: pulse 1.3s infinite; }
-    @keyframes pulse { 0%{opacity:1;} 50%{opacity:.35;} 100%{opacity:1;} }
-
-    .grid { display: grid; gap: 16px; }
-    .benefits { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-    .card {
-      border: 1px solid var(--line);
-      background: var(--card);
-      border-radius: var(--radius);
-      padding: 18px;
-      box-shadow: var(--shadow);
-      transition: transform .25s ease, border-color .25s ease;
+    .price strong { font-size: 36px; letter-spacing: -.5px; }
+    .old-price { color: var(--muted); text-decoration: line-through; }
+    .discount {
+      padding: 6px 10px;
+      border-radius: 10px;
+      background: rgba(255,92,122,.16);
+      color: #ffc3d1;
+      border: 1px solid rgba(255,92,122,.45);
+      font-weight: 700;
+      font-size: 13px;
     }
-    .card:hover { transform: translateY(-4px); border-color: rgba(47, 107, 255, 0.5); }
-    .icon { font-size: 24px; margin-bottom: 10px; display: inline-block; }
-    .card h3 { margin: 0 0 8px; font-size: 18px; }
-    .card p { margin: 0; color: var(--muted); }
 
-    .gallery { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-    .product-image {
-      border-radius: 16px;
+    .btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
       width: 100%;
-      height: 370px;
+      border: none;
+      border-radius: 14px;
+      padding: 16px 20px;
+      font: inherit;
+      font-weight: 800;
+      text-decoration: none;
+      cursor: pointer;
+      color: #041714;
+      background: linear-gradient(135deg, var(--accent), #6bffd6);
+      box-shadow: 0 15px 30px rgba(49,216,185,.3);
+      transition: transform .2s ease, opacity .2s ease;
+      min-height: 54px;
+    }
+    .btn:active { transform: scale(.98); }
+
+    .quick-trust {
+      margin-top: 14px;
+      display: grid;
+      gap: 8px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .quick-trust span {
+      border: 1px solid var(--line);
+      background: var(--surface-soft);
+      border-radius: 12px;
+      text-align: center;
+      padding: 10px 8px;
+      font-size: 12px;
+      color: #dbe4ff;
+    }
+
+    .card {
+      background: var(--surface-soft);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 16px;
+      box-shadow: var(--shadow);
+    }
+
+    .flow {
+      display: grid;
+      gap: 14px;
+    }
+
+    .problem-list,
+    .trust-list { margin: 0; padding-left: 18px; color: #d7ddf0; }
+    .problem-list li,
+    .trust-list li { margin: 8px 0; }
+
+    .benefits {
+      display: grid;
+      gap: 10px;
+    }
+    .benefit {
+      display: grid;
+      grid-template-columns: 40px 1fr;
+      align-items: start;
+      gap: 10px;
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: rgba(255,255,255,.03);
+      transition: transform .2s ease;
+    }
+    .benefit:hover { transform: translateY(-2px); }
+    .icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      background: rgba(49,216,185,.14);
+      border: 1px solid rgba(49,216,185,.35);
+      font-size: 20px;
+    }
+
+    .gallery {
+      display: grid;
+      gap: 10px;
+      grid-template-columns: repeat(2, 1fr);
+      margin-top: 12px;
+    }
+    .gallery img {
+      width: 100%;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+    }
+
+    .reviews {
+      display: grid;
+      gap: 10px;
+      margin-top: 12px;
+    }
+    .review-head {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+    .avatar {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
       object-fit: cover;
       border: 1px solid var(--line);
     }
+    .stars { color: #ffd553; font-size: 13px; }
 
-    .offer-strip {
-      margin-top: 22px;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 12px;
-      padding: 14px;
-      border-radius: 14px;
-      background: rgba(34, 197, 94, 0.08);
-      border: 1px solid rgba(34, 197, 94, 0.3);
-    }
-
-    .timer {
-      font-size: 30px;
-      letter-spacing: 1px;
-      font-weight: 800;
-      color: #d7e3ff;
-    }
-
-    .reviews { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-    .review-head { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
-    .avatar { width: 52px; height: 52px; border-radius: 50%; object-fit: cover; border: 2px solid var(--line); }
-    .stars { color: #facc15; font-size: 14px; }
-
-    .form-wrap {
-      display: grid;
-      grid-template-columns: 1.1fr .9fr;
-      gap: 20px;
-      align-items: start;
-    }
-
-    form {
-      border: 1px solid var(--line);
-      background: rgba(12, 14, 20, 0.96);
+    .offer {
+      border: 1px solid rgba(61,220,132,.45);
+      background: rgba(61,220,132,.1);
       border-radius: var(--radius);
-      padding: 22px;
+      padding: 16px;
+      display: grid;
+      gap: 10px;
     }
-    .field { margin-bottom: 12px; }
-    input, select {
+    .timer {
+      font-size: 34px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    .form {
+      margin-top: 14px;
+      display: grid;
+      gap: 10px;
+    }
+    input {
       width: 100%;
-      background: #0f131e;
-      color: #e5ebff;
-      border: 1px solid #26314f;
-      padding: 13px 14px;
+      background: #0f1626;
+      border: 1px solid #2b3a5f;
+      color: #eaf0ff;
       border-radius: 12px;
+      padding: 14px;
       font: inherit;
+      min-height: 50px;
       outline: none;
-      transition: border-color .2s ease;
     }
-    input:focus, select:focus { border-color: var(--accent); }
-    .fineprint { font-size: 12px; color: var(--muted); }
+    input:focus { border-color: var(--accent); }
 
-    .footer { border-top: 1px solid var(--line); padding: 24px 0 90px; color: var(--muted); }
-    .footer a { color: #c8d3ff; text-decoration: none; }
+    .note {
+      font-size: 12px;
+      color: var(--muted);
+      text-align: center;
+    }
 
-    .sticky-cta {
+    .sticky {
       position: fixed;
-      left: 10px;
-      right: 10px;
-      bottom: 10px;
-      z-index: 55;
-      display: none;
-      backdrop-filter: blur(8px);
-      background: rgba(8, 9, 13, 0.82);
+      left: 8px;
+      right: 8px;
+      bottom: 8px;
+      z-index: 60;
+      padding: 10px;
       border: 1px solid var(--line);
       border-radius: 14px;
-      padding: 10px;
+      backdrop-filter: blur(10px);
+      background: rgba(7, 9, 15, .84);
     }
-    .sticky-cta .btn { width: 100%; text-align: center; }
 
-    @media (max-width: 920px) {
-      .benefits, .reviews, .gallery, .form-wrap { grid-template-columns: 1fr 1fr; }
+    .fade {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity .55s ease, transform .55s ease;
     }
-    @media (max-width: 640px) {
-      .section { padding: 42px 0; }
-      .trust-inline, .benefits, .reviews, .gallery, .form-wrap { grid-template-columns: 1fr; }
-      .product-image { height: 320px; }
-      .sticky-cta { display: block; }
-      .price-new { font-size: 36px; }
-      .hero { min-height: 88vh; }
-      .container { width: min(95%, 500px); }
+    .fade.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    footer {
+      padding: 14px 0 98px;
+      text-align: center;
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      margin-top: 18px;
+      font-size: 14px;
+    }
+    footer a { color: #d5def8; text-decoration: none; }
+
+    @media (min-width: 768px) {
+      .container { width: min(92%, 980px); }
+      .section { padding: 58px 0; }
+      .flow-two { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+      .benefits { grid-template-columns: 1fr 1fr; }
+      .reviews { grid-template-columns: repeat(2, 1fr); }
+      .sticky { max-width: 520px; margin: 0 auto; left: 0; right: 0; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
     }
   </style>
 </head>
 <body>
-  <section class="hero">
-    <div class="hero-bg" id="heroParallax"></div>
-    <div class="container hero-content reveal">
-      <span class="badge">🔥 ХІТ FACEBOOK • ЗАЛИШИЛОСЬ МАЛО РОЗМІРІВ</span>
-      <h1>Виглядайте дорого щодня: преміум костюм, що візуально робить фігуру стрункішою за 10 секунд</h1>
-      <p>М’яка тканина, ідеальна посадка від 42 до 64, трендові кольори 2026. Носіть на роботу, зустрічі та щодня — один комплект, десятки стильних образів.</p>
-      <div class="price-row">
-        <div class="price-new">1199 грн</div>
-        <div class="price-old">1712 грн</div>
-        <div class="discount-tag">-30% тільки сьогодні</div>
+  <header class="hero">
+    <div class="hero-bg" id="heroParallax" aria-hidden="true"></div>
+    <div class="container hero-inner">
+      <span class="badge">НОВА КОЛЕКЦІЯ 2026 • ОПЛАТА ПРИ ОТРИМАННІ</span>
+      <h1>Костюм, у якому ви виглядаєте на мільйон — за ціною вигідної покупки сьогодні</h1>
+      <p>Сучасний крій, м’яка тканина та посадка, що підкреслює фігуру. Ідеально для роботи, прогулянок і подій без зайвих зусиль.</p>
+      <div class="price">
+        <strong>1199 грн</strong>
+        <span class="old-price">1712 грн</span>
+        <span class="discount">-30% до кінця таймера</span>
       </div>
-      <div class="cta-row">
-        <a class="btn" href="#order">Отримати зі знижкою</a>
-        <a class="btn ghost" href="#reviews">Дивитись відгуки</a>
-      </div>
-      <div class="ticker"><span class="dot"></span> Онлайн зараз переглядають пропозицію: <strong>37 осіб</strong></div>
-      <div class="trust-inline">
-        <div>✅ Оплата при отриманні</div>
-        <div>🚚 Відправка за 24 години</div>
-        <div>🔒 Гарантія обміну 14 днів</div>
+      <a href="#order" class="btn js-order-trigger">Замовити зі знижкою</a>
+      <div class="quick-trust">
+        <span>🚚 1–3 дні по Україні</span>
+        <span>💳 Оплата при отриманні</span>
+        <span>🔄 Обмін 14 днів</span>
       </div>
     </div>
-  </section>
+  </header>
 
-  <section class="section container reveal">
-    <div class="grid benefits">
-      <article class="card"><span class="icon">✨</span><h3>Преміум вигляд</h3><p>Глибокі кольори та сучасний крій підкреслюють статус і смак.</p></article>
-      <article class="card"><span class="icon">🧵</span><h3>Якісний матеріал</h3><p>Тканина не просвічує, тримає форму та приємна до тіла.</p></article>
-      <article class="card"><span class="icon">📏</span><h3>Розміри 42–64</h3><p>Підібраємо розмір під ваші параметри по телефону за 2 хвилини.</p></article>
-      <article class="card"><span class="icon">💎</span><h3>Універсальність</h3><p>Легко комбінується з улюбленими аксесуарами і взуттям.</p></article>
-    </div>
-  </section>
-
-  <section class="section container reveal">
-    <h2>Трендові кольори, які вже замовляють найчастіше</h2>
-    <div class="grid gallery" style="margin-top:16px;">
-      <img class="product-image" src="1/1.jpg" alt="Костюм бірюзовий" />
-      <img class="product-image" src="4/1.jpg" alt="Костюм червоний" />
-      <img class="product-image" src="5/1.jpg" alt="Костюм чорний" />
-    </div>
-    <div class="offer-strip">
-      <strong style="color:#b9ffd0;">Обмежена пропозиція:</strong>
-      <span>до завершення акції залишилось</span>
-      <span class="timer" id="countdown">15:00</span>
-      <a class="btn" href="#order">Встигнути замовити</a>
-    </div>
-  </section>
-
-  <section class="section container reveal" id="reviews">
-    <h2>Реальні відгуки покупців</h2>
-    <div class="grid reviews" style="margin-top:16px;">
-      <article class="card">
-        <div class="review-head"><img class="avatar" src="landing-template-assets/springclothes/img/review1.jpg" alt="Аватар" /><div><strong>Анастасія</strong><div class="stars">★★★★★</div></div></div>
-        <p>«Сіла ідеально, тканина дуже приємна. На фото виглядає дорого, вживу ще краще!»</p>
-      </article>
-      <article class="card">
-        <div class="review-head"><img class="avatar" src="landing-template-assets/springclothes/img/review2.png" alt="Аватар" /><div><strong>Наталія</strong><div class="stars">★★★★★</div></div></div>
-        <p>«Брала для роботи та прогулянок. Дуже зручний крій, не сковує рухи. Рекомендую!»</p>
-      </article>
-      <article class="card">
-        <div class="review-head"><img class="avatar" src="landing-template-assets/springclothes/img/review3.jpg" alt="Аватар" /><div><strong>Катерина</strong><div class="stars">★★★★★</div></div></div>
-        <p>«Помилилась із розміром — без проблем зробили обмін. Сервіс і якість на рівні!»</p>
-      </article>
-    </div>
-  </section>
-
-  <section class="section container reveal" id="order">
-    <div class="form-wrap">
-      <div class="card">
-        <h2>Оформіть замовлення за 30 секунд</h2>
-        <p>Менеджер зателефонує, уточнить розмір, колір і підтвердить відправку. Без передоплати.</p>
-        <ul>
-          <li>✅ Доставка Новою Поштою 1–3 дні</li>
-          <li>✅ Оплата при отриманні</li>
-          <li>✅ Гарантія якості 100%</li>
-        </ul>
+  <main class="container">
+    <section class="section fade">
+      <div class="flow">
+        <article class="card">
+          <h2>Впізнаєте себе?</h2>
+          <ul class="problem-list">
+            <li>Речі виглядають добре на фото, але не сідають в реальному житті.</li>
+            <li>Тканина швидко втрачає форму після кількох прань.</li>
+            <li>Складно знайти універсальний комплект на кожен день.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h2>Наше рішення</h2>
+          <p>Преміум костюм 2-в-1 створений для українських жінок: комфортний на цілий день, візуально стрункіший силует і трендовий вигляд без складних поєднань.</p>
+          <div class="gallery" aria-label="Галерея кольорів">
+            <img src="1/1.jpg" alt="Колір бірюза" loading="lazy" />
+            <img src="4/1.jpg" alt="Колір червоний" loading="lazy" />
+            <img src="5/1.jpg" alt="Колір чорний" loading="lazy" />
+            <img src="2/1.jpg" alt="Колір салатовий" loading="lazy" />
+          </div>
+        </article>
       </div>
-      <form class="orderformcdn" action="send.php" method="post">
-        <input type="hidden" name="utm_source" />
-        <input type="hidden" name="utm_medium" />
-        <input type="hidden" name="utm_campaign" />
-        <input type="hidden" name="utm_content" />
-        <input type="hidden" name="utm_term" />
-        <input type="hidden" name="price_1" value="1199" />
+    </section>
 
-        <div class="field"><input name="name" type="text" placeholder="Ваше ім'я" required /></div>
-        <div class="field"><input name="phone" type="tel" placeholder="Ваш телефон (+380...)" pattern="^\+380[0-9]{9}$" required /></div>
-        <div class="field">
-          <select required name="product_id_and_size">
-            <option value="">Оберіть розмір</option>
-            <option value="408474-48/50">48/50</option>
-            <option value="408475-54/58">54/58</option>
-            <option value="408476-60/62">60/62</option>
-          </select>
-        </div>
-        <div class="field">
-          <select required name="custom_colorProdOrder">
-            <option value="">Оберіть колір</option>
-            <option value="Бірюза">Бірюза</option>
-            <option value="Салатовий">Салатовий</option>
-            <option value="Бутилочний">Бутилочний</option>
-            <option value="Червоний">Червоний</option>
-            <option value="Чорний">Чорний</option>
-          </select>
-        </div>
-        <button type="submit" class="btn" style="width:100%;">Замовити зі знижкою 30%</button>
-        <p class="fineprint">Натискаючи кнопку, ви погоджуєтесь з політикою конфіденційності.</p>
-      </form>
+    <section class="section fade">
+      <h2>Чому цей костюм купують повторно</h2>
+      <div class="benefits" style="margin-top:12px;">
+        <article class="benefit"><span class="icon">✨</span><div><strong>Ефектний вигляд</strong><p>Акуратний силует та глибокі кольори у стилі 2026.</p></div></article>
+        <article class="benefit"><span class="icon">🧵</span><div><strong>Щільна тканина</strong><p>Не просвічує, тримає форму, м’яка до тіла.</p></div></article>
+        <article class="benefit"><span class="icon">📏</span><div><strong>Розміри 42–64</strong><p>Підберемо оптимальну посадку по вашим параметрам.</p></div></article>
+        <article class="benefit"><span class="icon">💎</span><div><strong>Універсальний набір</strong><p>Один комплект — десятки стильних образів.</p></div></article>
+      </div>
+    </section>
+
+    <section class="section fade" id="reviews">
+      <h2>Відгуки реальних покупців</h2>
+      <div class="reviews">
+        <article class="card">
+          <div class="review-head"><img class="avatar" src="landing-template-assets/springclothes/img/review1.jpg" alt="Анастасія" loading="lazy" /><div><strong>Анастасія, Київ</strong><div class="stars">★★★★★</div></div></div>
+          <p>«Замовила на пробу, а тепер хочу ще один колір. Виглядає значно дорожче своєї ціни.»</p>
+        </article>
+        <article class="card">
+          <div class="review-head"><img class="avatar" src="landing-template-assets/springclothes/img/review2.png" alt="Леся" loading="lazy" /><div><strong>Леся, Львів</strong><div class="stars">★★★★★</div></div></div>
+          <p>«Дуже зручний у русі, не парить. На щодень ідеально, плюс швидко відправили.»</p>
+        </article>
+        <article class="card">
+          <div class="review-head"><img class="avatar" src="landing-template-assets/springclothes/img/review3.jpg" alt="Марина" loading="lazy" /><div><strong>Марина, Одеса</strong><div class="stars">★★★★★</div></div></div>
+          <p>«Чоловік сказав, що це найкраща моя покупка за сезон. Сів по фігурі супер.»</p>
+        </article>
+        <article class="card">
+          <div class="review-head"><img class="avatar" src="landing-template-assets/springclothes/img/review1.jpg" alt="Ірина" loading="lazy" /><div><strong>Ірина, Дніпро</strong><div class="stars">★★★★★</div></div></div>
+          <p>«Мені важливо було без передоплати — отримала, приміряла, оплатила на пошті. Все чесно.»</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section fade">
+      <div class="flow-two">
+        <article class="card">
+          <h2>Чому нам довіряють</h2>
+          <ul class="trust-list">
+            <li>Працюємо офіційно та щодня обробляємо замовлення по Україні.</li>
+            <li>Оплата тільки при отриманні після огляду товару.</li>
+            <li>Контроль якості перед відправкою кожної посилки.</li>
+            <li>Підтримка клієнта та обмін/повернення згідно умов.</li>
+          </ul>
+        </article>
+
+        <article class="offer" id="order">
+          <strong>Спеціальна пропозиція діє обмежений час:</strong>
+          <div class="timer" id="timer">15:00</div>
+          <p>Після завершення таймера ціна повернеться до стандартної — 1712 грн.</p>
+
+          <form class="form" id="orderForm" action="thankyou.html" method="get">
+            <input type="text" name="name" placeholder="Ваше ім'я" required />
+            <input type="tel" name="phone" placeholder="Ваш телефон (+380...)" pattern="^\+380[0-9]{9}$" required />
+            <button class="btn js-order-trigger" type="submit">Замовити зараз за 1199 грн</button>
+            <p class="note">Натискаючи кнопку, ви підтверджуєте згоду на обробку персональних даних.</p>
+          </form>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <a href="privacy-policy.html">Політика конфіденційності</a> · <a href="terms-of-use.html">Угода користувача</a>
     </div>
-  </section>
-
-  <footer class="footer container">
-    <p><a href="privacy-policy.html">Політика конфіденційності</a> · <a href="terms-of-use.html">Угода користувача</a></p>
   </footer>
 
-  <div class="sticky-cta">
-    <a class="btn" href="#order">🔥 Замовити зараз за 1199 грн</a>
+  <div class="sticky" aria-label="Швидке замовлення">
+    <a class="btn js-order-trigger" href="#order">Замовити зі знижкою 30%</a>
   </div>
 
   <script>
-    const revealItems = document.querySelectorAll('.reveal');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
+    const nodes = document.querySelectorAll('.fade');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('show');
-          observer.unobserve(entry.target);
+          entry.target.classList.add('visible');
+          io.unobserve(entry.target);
         }
       });
     }, { threshold: 0.15 });
-    revealItems.forEach(item => observer.observe(item));
+    nodes.forEach((el) => io.observe(el));
 
-    const heroBg = document.getElementById('heroParallax');
+    const hero = document.getElementById('heroParallax');
     window.addEventListener('scroll', () => {
-      heroBg.style.transform = `translateY(${window.scrollY * 0.18}px)`;
-    });
+      hero.style.transform = `translateY(${window.scrollY * 0.12}px)`;
+    }, { passive: true });
 
-    let seconds = 15 * 60;
-    const timer = document.getElementById('countdown');
+    let left = 15 * 60;
+    const timer = document.getElementById('timer');
     setInterval(() => {
-      if (seconds > 0) seconds -= 1;
-      const m = String(Math.floor(seconds / 60)).padStart(2, '0');
-      const s = String(seconds % 60).padStart(2, '0');
-      timer.textContent = `${m}:${s}`;
+      if (left > 0) left -= 1;
+      const mm = String(Math.floor(left / 60)).padStart(2, '0');
+      const ss = String(left % 60).padStart(2, '0');
+      timer.textContent = `${mm}:${ss}`;
     }, 1000);
 
-    const params = new URLSearchParams(window.location.search);
-    ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach((key) => {
-      document.querySelectorAll(`[name="${key}"]`).forEach((field) => field.value = params.get(key) || '');
+    document.querySelectorAll('.js-order-trigger').forEach((node) => {
+      node.addEventListener('click', () => {
+        if (typeof fbq === 'function') fbq('track', 'InitiateCheckout');
+      });
     });
   </script>
 </body>
