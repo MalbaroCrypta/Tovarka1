@@ -3,36 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Жіночий костюм 2-в-1 — стильний образ на кожен день</title>
-  <meta name="description" content="Сучасний жіночий костюм 2-в-1. Швидка доставка по Україні, оплата при отриманні, обмін та гарантія 14 днів." />
-
-  <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1655876945542323');
-    fbq('track', 'PageView');
-  </script>
-  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1655876945542323&ev=PageView&noscript=1" alt="" /></noscript>
-
+  <title>Жіночий костюм 2-в-1 — сучасний стиль</title>
+  <meta name="description" content="Жіночий костюм 2-в-1. Оплата при отриманні, доставка 1-3 дні по Україні, гарантія 14 днів." />
   <style>
     :root {
-      --bg: #f5f7fb;
-      --text: #101828;
-      --muted: #667085;
-      --line: #e7ecf5;
-      --card: #ffffff;
-      --accent: #ff6b2c;
-      --accent-2: #ff8e5e;
-      --ok: #16a34a;
-      --radius-lg: 28px;
+      --bg: #080b12;
+      --bg-soft: #111827;
+      --card: #121a2b;
+      --line: #27324a;
+      --text: #f7f9ff;
+      --muted: #9aa8c7;
+      --accent: #59f3b3;
+      --accent-2: #37d7ff;
+      --radius-lg: 24px;
       --radius-md: 18px;
-      --shadow: 0 14px 40px rgba(16, 24, 40, .1);
     }
 
     * { box-sizing: border-box; }
@@ -40,187 +24,129 @@
     body {
       margin: 0;
       font-family: Inter, Manrope, system-ui, -apple-system, sans-serif;
+      background: radial-gradient(circle at 20% 0, #10203f 0%, transparent 40%), var(--bg);
       color: var(--text);
-      background: radial-gradient(circle at 10% 0, #fff0ea 0, transparent 38%), var(--bg);
-      line-height: 1.5;
-      padding-bottom: 92px;
+      line-height: 1.45;
+      padding-bottom: 96px;
     }
 
     img { max-width: 100%; display: block; }
-    .container { width: min(100% - 28px, 1080px); margin-inline: auto; }
-    .section { padding: 30px 0; }
+    .container { width: min(100% - 24px, 1080px); margin-inline: auto; }
+    .section { padding: 18px 0; }
+
     .card {
-      background: var(--card);
       border: 1px solid var(--line);
+      background: linear-gradient(180deg, #111a2c, #0d1422);
       border-radius: var(--radius-lg);
-      box-shadow: var(--shadow);
+      padding: 18px;
     }
 
-    .hero {
-      padding: 20px 0 28px;
+    .fade {
+      opacity: 0;
+      transform: translateY(16px);
+      animation: fadeInUp .7s ease forwards;
     }
-    .hero-wrap {
-      padding: 16px;
-      overflow: hidden;
+    .delay-1 { animation-delay: .12s; }
+    .delay-2 { animation-delay: .24s; }
+    .delay-3 { animation-delay: .36s; }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
-    .hero-grid {
-      display: grid;
-      gap: 16px;
-    }
-    .hero-media {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-    }
-    .hero-media img {
-      aspect-ratio: 3/4;
-      object-fit: cover;
-      border-radius: 18px;
-    }
-    .hero-media img:first-child {
-      grid-column: span 2;
-      aspect-ratio: 4/3;
-    }
+
+    h1, h2, h3 { margin: 0 0 10px; line-height: 1.15; }
+    h1 { font-size: clamp(30px, 8.5vw, 48px); }
+    h2 { font-size: clamp(24px, 6.8vw, 34px); }
+    p { margin: 0; color: var(--muted); }
 
     .badge {
       display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      border-radius: 999px;
-      background: #fff3ee;
-      color: #c64511;
       padding: 8px 12px;
-      font-weight: 700;
+      border-radius: 999px;
+      background: rgba(89, 243, 179, .16);
+      color: var(--accent);
       font-size: 12px;
-      margin-bottom: 10px;
+      font-weight: 700;
+      margin-bottom: 12px;
     }
-    h1 {
-      margin: 0;
-      font-size: clamp(30px, 9vw, 48px);
-      line-height: 1.08;
-      letter-spacing: -.02em;
+
+    .hero-photo {
+      margin-top: 14px;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid var(--line);
     }
-    .lead { margin-top: 12px; color: var(--muted); }
+    .hero-photo img { aspect-ratio: 4/5; object-fit: cover; width: 100%; }
 
     .price {
-      margin-top: 14px;
+      margin: 14px 0;
       display: flex;
       align-items: center;
-      flex-wrap: wrap;
       gap: 10px;
+      flex-wrap: wrap;
     }
-    .price strong { font-size: 36px; }
-    .old { color: var(--muted); text-decoration: line-through; font-weight: 600; }
-    .sale {
-      background: #ffe5db;
-      color: #ab3100;
-      border-radius: 10px;
-      padding: 6px 10px;
-      font-weight: 700;
-      font-size: 13px;
-    }
-
-    .trust-icons {
-      margin-top: 14px;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 8px;
-    }
-    .trust-icons div {
-      text-align: center;
-      font-size: 12px;
-      font-weight: 600;
-      color: #344054;
-      background: #fff;
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      padding: 10px 8px;
-    }
+    .price strong { font-size: 34px; color: var(--accent); }
+    .old { text-decoration: line-through; color: #7f8fb3; }
 
     .btn {
       display: inline-flex;
-      width: 100%;
       justify-content: center;
       align-items: center;
+      width: 100%;
+      min-height: 58px;
       border: 0;
       border-radius: 16px;
-      min-height: 56px;
-      padding: 14px 18px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: #03131b;
+      text-decoration: none;
       font: inherit;
       font-weight: 800;
-      color: #fff;
       cursor: pointer;
-      text-decoration: none;
-      background: linear-gradient(135deg, var(--accent), var(--accent-2));
-      box-shadow: 0 10px 24px rgba(255, 107, 44, .35);
-      transition: transform .24s ease, box-shadow .24s ease;
+      transition: transform .2s ease;
     }
     .btn:active { transform: scale(.98); }
 
-    .animate {
-      opacity: 0;
-      transform: translateY(18px);
-      transition: opacity .55s ease, transform .55s ease;
-    }
-    .animate.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .two-col,
+    .grid,
     .reviews,
-    .gallery,
-    .benefits { display: grid; gap: 12px; }
-
-    h2 {
-      margin: 0 0 8px;
-      font-size: clamp(24px, 7vw, 34px);
-      line-height: 1.15;
-    }
-
-    .gallery img {
-      border-radius: 18px;
-      aspect-ratio: 3/4;
-      object-fit: cover;
-    }
+    .faq-list { display: grid; gap: 12px; }
 
     .benefit {
-      border: 1px solid var(--line);
       border-radius: var(--radius-md);
-      background: #fff;
+      border: 1px solid var(--line);
       padding: 14px;
-      display: grid;
-      grid-template-columns: 42px 1fr;
-      gap: 10px;
-      align-items: start;
+      background: #0f1829;
     }
-    .icon {
-      width: 42px;
-      height: 42px;
-      border-radius: 12px;
-      background: #fff2ec;
-      display: grid;
-      place-items: center;
-      font-size: 21px;
+    .benefit strong { display: block; margin-bottom: 4px; }
+
+    .trust {
+      text-align: center;
+      padding: 22px 16px;
+      background: linear-gradient(145deg, rgba(89,243,179,.16), rgba(55,215,255,.08));
+    }
+    .trust strong {
+      display: block;
+      font-size: clamp(30px, 9vw, 46px);
+      color: var(--accent);
+      margin-bottom: 4px;
     }
 
-    .trust-block {
-      background: linear-gradient(145deg, #fff, #fff8f5);
-      padding: 20px;
-      text-align: center;
+    .gallery img,
+    .product-main {
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      object-fit: cover;
     }
-    .trust-block strong {
-      display: block;
-      font-size: clamp(28px, 8vw, 44px);
-      margin-bottom: 6px;
-      color: #bf2f00;
-    }
+    .gallery img { aspect-ratio: 3/4; width: 100%; }
+    .product-main { aspect-ratio: 1/1; width: 100%; margin-bottom: 10px; }
 
     .review {
-      padding: 14px;
       border-radius: 20px;
       border: 1px solid var(--line);
-      background: #fff;
+      background: #0f1829;
+      padding: 14px;
     }
     .review-head {
       display: flex;
@@ -229,40 +155,45 @@
       margin-bottom: 8px;
     }
     .avatar {
-      width: 54px;
-      height: 54px;
+      width: 52px;
+      height: 52px;
       border-radius: 50%;
       object-fit: cover;
+      border: 2px solid #283654;
     }
 
-    .offer { padding: 16px; }
-    .timer {
-      font-size: clamp(34px, 8vw, 48px);
-      font-weight: 800;
-      margin: 6px 0 8px;
+    .pill-list {
+      margin-top: 10px;
+      display: grid;
+      gap: 8px;
     }
-    .form { margin-top: 12px; display: grid; gap: 10px; }
+    .pill {
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      background: #0f1829;
+      padding: 10px 12px;
+      font-weight: 600;
+    }
+
+    form { display: grid; gap: 10px; margin-top: 12px; }
     input {
       width: 100%;
-      border: 1px solid #d2d9e8;
       border-radius: 14px;
+      border: 1px solid #32405e;
       min-height: 50px;
-      padding: 12px 14px;
-      font: inherit;
+      padding: 12px;
+      background: #0b1322;
       color: var(--text);
-      background: #fff;
+      font: inherit;
       outline: 0;
     }
-    input:focus { border-color: #ff8e5e; }
+    input:focus { border-color: var(--accent); }
 
-    .guarantee {
-      margin-top: 12px;
-      border: 1px dashed #f4b098;
+    .faq-item {
       border-radius: 16px;
+      border: 1px solid var(--line);
       padding: 12px;
-      background: #fff7f3;
-      color: #8a330f;
-      font-weight: 600;
+      background: #0f1829;
     }
 
     .sticky {
@@ -270,132 +201,162 @@
       left: 8px;
       right: 8px;
       bottom: 8px;
-      z-index: 50;
+      z-index: 30;
       padding: 8px;
-      background: rgba(255,255,255,.92);
-      border: 1px solid #dde3f0;
       border-radius: 18px;
+      border: 1px solid #23304c;
+      background: rgba(10, 16, 28, .94);
       backdrop-filter: blur(8px);
     }
 
     footer {
-      padding: 16px 0 100px;
+      padding: 14px 0 110px;
       text-align: center;
-      color: var(--muted);
+      color: #7f8fb3;
       font-size: 14px;
     }
-    footer a { color: #475467; text-decoration: none; }
+    footer a { color: #aab8d8; text-decoration: none; }
 
     @media (min-width: 760px) {
-      body { padding-bottom: 30px; }
-      .hero-wrap { padding: 22px; }
-      .hero-grid { grid-template-columns: 1.05fr .95fr; align-items: center; }
+      body { padding-bottom: 24px; }
+      .hero-wrap,
+      .two-col,
+      .reviews,
+      .gallery,
+      .faq-list { grid-template-columns: 1fr 1fr; }
+      .hero-wrap { display: grid; gap: 16px; align-items: center; }
       .gallery { grid-template-columns: repeat(4, 1fr); }
-      .two-col { grid-template-columns: 1fr 1fr; }
-      .benefits { grid-template-columns: 1fr 1fr; }
-      .reviews { grid-template-columns: repeat(2, 1fr); }
       .sticky { display: none; }
     }
 
     @media (prefers-reduced-motion: reduce) {
-      * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+      *, *::before, *::after { animation: none !important; transition: none !important; }
     }
   </style>
 </head>
 <body>
-  <header class="hero">
+  <header class="section">
     <div class="container">
-      <div class="card hero-wrap">
-        <div class="hero-grid">
-          <div>
-            <span class="badge">НОВИНКА 2026 • ОПЛАТА ПРИ ОТРИМАННІ</span>
-            <h1>Преміальний костюм 2-в-1 для впевненого образу щодня</h1>
-            <p class="lead">Виглядає дорого, носиться комфортно та легко комбінується з вашим гардеробом. Ідеально для міста, офісу і подорожей.</p>
-            <div class="price">
-              <strong>1199 грн</strong>
-              <span class="old">1712 грн</span>
-              <span class="sale">-30% сьогодні</span>
-            </div>
-            <a href="#order" class="btn js-order-btn">Замовити зараз</a>
-            <div class="trust-icons">
-              <div>🚚 Швидка доставка</div>
-              <div>✅ Сертифікована якість</div>
-              <div>🔁 Гарантія 14 днів</div>
-            </div>
+      <div class="card hero-wrap fade">
+        <div>
+          <span class="badge">НОВИЙ ДИЗАЙН 2026</span>
+          <h1>Жіночий костюм 2-в-1 для щоденного стильного образу</h1>
+          <p>М'яка тканина, зручна посадка та сучасний крій. Оплата при отриманні та доставка 1-3 дні по Україні.</p>
+          <div class="price">
+            <strong>1199 грн</strong>
+            <span class="old">1712 грн</span>
           </div>
-          <div class="hero-media" aria-label="Фото клієнток у костюмах">
-            <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80" alt="Стильний образ на прогулянці" loading="eager" />
-            <img src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?auto=format&fit=crop&w=700&q=80" alt="Клієнтка у світлому костюмі" loading="lazy" />
-            <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=700&q=80" alt="Клієнтка у міському стилі" loading="lazy" />
-          </div>
+          <a class="btn" href="#order">Замовити</a>
+        </div>
+        <div class="hero-photo">
+          <img src="1/1.jpg" alt="Жіночий костюм 2-в-1" loading="eager" />
         </div>
       </div>
     </div>
   </header>
 
   <main class="container">
-    <section class="section animate">
-      <div class="card trust-block">
+    <section class="section fade delay-1">
+      <div class="card trust">
         <strong>10 000+</strong>
-        <p>Нам довіряють понад 10 000 клієнтів по всій Україні. Щодня відправляємо замовлення та підтримуємо клієнтів до отримання.</p>
+        <p>Нам довіряють 10 000+ клієнтів по всій Україні.</p>
       </div>
     </section>
 
-    <section class="section animate">
-      <h2>Чому обирають саме цей костюм</h2>
-      <div class="benefits" style="margin-top: 12px;">
-        <article class="benefit"><div class="icon">✨</div><div><strong>Сучасний фасон 2026</strong><p>Вільна посадка та чіткий силует, який підкреслює фігуру.</p></div></article>
-        <article class="benefit"><div class="icon">🧵</div><div><strong>Щільна м'яка тканина</strong><p>Не просвічує, приємна до тіла та добре тримає форму.</p></div></article>
-        <article class="benefit"><div class="icon">🌦️</div><div><strong>На різну погоду</strong><p>Костюм комфортний для активного дня та подорожей.</p></div></article>
-        <article class="benefit"><div class="icon">🎯</div><div><strong>Легко поєднувати</strong><p>Має стильний вигляд як комплект і як окремі речі.</p></div></article>
+    <section class="section fade delay-1">
+      <h2>Переваги</h2>
+      <div class="grid">
+        <article class="benefit"><strong>Сучасний стиль 2026</strong><p>Актуальний крій, який підходить на кожен день.</p></article>
+        <article class="benefit"><strong>Комфортна тканина</strong><p>М'яка, щільна та приємна до тіла.</p></article>
+        <article class="benefit"><strong>Легкий догляд</strong><p>Після прання зберігає форму та колір.</p></article>
+        <article class="benefit"><strong>Універсальний комплект</strong><p>Можна носити разом або окремо.</p></article>
       </div>
     </section>
 
-    <section class="section animate">
-      <h2>Кольори та реальні фото</h2>
-      <div class="gallery" aria-label="Галерея кольорів">
-        <img src="1/1.jpg" alt="Бірюзовий костюм" loading="lazy" />
-        <img src="2/1.jpg" alt="Салатовий костюм" loading="lazy" />
-        <img src="4/1.jpg" alt="Червоний костюм" loading="lazy" />
-        <img src="5/1.jpg" alt="Чорний костюм" loading="lazy" />
+    <section class="section fade delay-2">
+      <h2>Фото товару</h2>
+      <img class="product-main" src="2/1.jpg" alt="Фото костюма крупним планом" loading="lazy" />
+      <div class="gallery">
+        <img src="3/1.jpg" alt="Костюм у зеленому кольорі" loading="lazy" />
+        <img src="4/1.jpg" alt="Костюм у червоному кольорі" loading="lazy" />
+        <img src="5/1.jpg" alt="Костюм у чорному кольорі" loading="lazy" />
+        <img src="1/2.jpg" alt="Костюм у реальному житті" loading="lazy" />
       </div>
     </section>
 
-    <section class="section animate" id="reviews">
-      <h2>Відгуки покупців</h2>
+    <section class="section fade delay-2">
+      <h2>Відгуки з фото</h2>
       <div class="reviews">
         <article class="review">
-          <div class="review-head"><img class="avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=300&q=80" alt="Олена" loading="lazy" /><div><strong>Олена, Київ</strong><div>★★★★★</div></div></div>
-          <p>Сіла ідеально з першого разу. Дуже якісна тканина і красивий колір, отримала багато компліментів.</p>
+          <div class="review-head">
+            <img class="avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=300&q=80" alt="Олена" loading="lazy" />
+            <div><strong>Олена, Київ</strong><p>★★★★★</p></div>
+          </div>
+          <p>Костюм сів ідеально. Дуже комфортний і виглядає дорожче за свою ціну.</p>
         </article>
         <article class="review">
-          <div class="review-head"><img class="avatar" src="https://images.unsplash.com/photo-1525134479668-1bee5c7c6845?auto=format&fit=crop&w=300&q=80" alt="Ірина" loading="lazy" /><div><strong>Ірина, Львів</strong><div>★★★★★</div></div></div>
-          <p>Після прання вигляд як новий. Дуже задоволена сервісом і швидкою доставкою.</p>
+          <div class="review-head">
+            <img class="avatar" src="https://images.unsplash.com/photo-1525134479668-1bee5c7c6845?auto=format&fit=crop&w=300&q=80" alt="Ірина" loading="lazy" />
+            <div><strong>Ірина, Львів</strong><p>★★★★★</p></div>
+          </div>
+          <p>Замовила після відгуків і не пошкодувала. Доставка прийшла за 2 дні.</p>
         </article>
         <article class="review">
-          <div class="review-head"><img class="avatar" src="https://images.unsplash.com/photo-1554151228-14d9def656e4?auto=format&fit=crop&w=300&q=80" alt="Марія" loading="lazy" /><div><strong>Марія, Вінниця</strong><div>★★★★★</div></div></div>
-          <p>Брала для роботи та прогулянок — універсальна річ, дуже зручна й виглядає дорого.</p>
+          <div class="review-head">
+            <img class="avatar" src="https://images.unsplash.com/photo-1554151228-14d9def656e4?auto=format&fit=crop&w=300&q=80" alt="Марія" loading="lazy" />
+            <div><strong>Марія, Вінниця</strong><p>★★★★★</p></div>
+          </div>
+          <p>Приємна тканина, гарний пошив. Ношу і в офіс, і на прогулянку.</p>
         </article>
         <article class="review">
-          <div class="review-head"><img class="avatar" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80" alt="Наталія" loading="lazy" /><div><strong>Наталія, Одеса</strong><div>★★★★★</div></div></div>
-          <p>Мені важлива впевненість у покупці, тому гарантія 14 днів дуже доречна. Рекомендую.</p>
+          <div class="review-head">
+            <img class="avatar" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80" alt="Світлана" loading="lazy" />
+            <div><strong>Світлана, Одеса</strong><p>★★★★★</p></div>
+          </div>
+          <p>Все як на фото. Сподобалось, що є гарантія 14 днів і оплата при отриманні.</p>
         </article>
       </div>
     </section>
 
-    <section class="section animate" id="order">
-      <div class="card offer">
-        <h2>Оформіть замовлення зі знижкою</h2>
-        <p>Пропозиція активна ще:</p>
-        <div class="timer" id="timer">15:00</div>
+    <section class="section fade delay-3">
+      <h2>Гарантія</h2>
+      <div class="card">
+        <p>Ми даємо гарантію 14 днів на обмін або повернення.</p>
+        <div class="pill-list">
+          <div class="pill">✅ Оплата при отриманні</div>
+          <div class="pill">🚚 Доставка 1-3 дні по Україні</div>
+          <div class="pill">🛡️ Гарантія 14 днів</div>
+        </div>
+      </div>
+    </section>
 
-        <form class="form" id="orderForm" action="thankyou.html" method="get" novalidate>
-          <input type="text" name="name" placeholder="Ваше ім'я" required />
-          <input type="tel" name="phone" placeholder="Ваш телефон (+380...)" pattern="^\+380[0-9]{9}$" required />
-          <button class="btn js-order-btn" type="submit" id="submitBtn">Замовити за 1199 грн</button>
+    <section class="section fade delay-3" id="order">
+      <h2>Форма замовлення</h2>
+      <div class="card">
+        <p>Заповніть дані, і менеджер зв'яжеться з вами для підтвердження.</p>
+        <form action="thankyou.html" method="get">
+          <input type="text" name="name" placeholder="Ім'я" required />
+          <input type="tel" name="phone" placeholder="Телефон" required />
+          <button class="btn" type="submit">Замовити</button>
         </form>
+      </div>
+    </section>
 
-        <div class="guarantee">🛡️ Гарантія 14 днів: якщо розмір або колір не підійде, допоможемо з обміном.</div>
+    <section class="section fade delay-3">
+      <h2>FAQ</h2>
+      <div class="faq-list">
+        <article class="faq-item"><h3>Як швидко відправляєте?</h3><p>Відправка щодня, доставка 1-3 дні по Україні.</p></article>
+        <article class="faq-item"><h3>Чи можна оплатити при отриманні?</h3><p>Так, оплата при отриманні у відділенні або кур'єру.</p></article>
+        <article class="faq-item"><h3>Якщо не підійде розмір?</h3><p>Протягом 14 днів допоможемо з обміном або поверненням.</p></article>
+        <article class="faq-item"><h3>Як зі мною зв'яжуться?</h3><p>Після заявки менеджер передзвонить для підтвердження замовлення.</p></article>
+      </div>
+    </section>
+
+    <section class="section fade delay-3">
+      <div class="card">
+        <h2>Готові оновити гардероб?</h2>
+        <p>Оформіть замовлення зараз та отримайте стильний костюм вже за кілька днів.</p>
+        <div style="margin-top:12px;"><a class="btn" href="#order">Замовити</a></div>
       </div>
     </section>
   </main>
@@ -405,72 +366,7 @@
   </footer>
 
   <div class="sticky">
-    <a class="btn js-order-btn" href="#order">Замовити зі знижкою</a>
+    <a class="btn" href="#order">Замовити</a>
   </div>
-
-  <script>
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.14 });
-    document.querySelectorAll('.animate').forEach((el) => observer.observe(el));
-
-    let left = 15 * 60;
-    const timer = document.getElementById('timer');
-    setInterval(() => {
-      if (left > 0) left -= 1;
-      const mm = String(Math.floor(left / 60)).padStart(2, '0');
-      const ss = String(left % 60).padStart(2, '0');
-      timer.textContent = `${mm}:${ss}`;
-    }, 1000);
-
-    const trackEvent = (name, data = {}, options = {}) => {
-      if (typeof window.fbq === 'function') {
-        window.fbq('track', name, data, options);
-      }
-    };
-
-    document.querySelectorAll('.js-order-btn').forEach((node) => {
-      node.addEventListener('click', () => {
-        trackEvent('InitiateCheckout', { currency: 'UAH', value: 1199 });
-      });
-    });
-
-    const form = document.getElementById('orderForm');
-    const submitBtn = document.getElementById('submitBtn');
-
-    form.addEventListener('submit', (event) => {
-      event.preventDefault();
-
-      if (!form.checkValidity()) {
-        form.reportValidity();
-        return;
-      }
-
-      submitBtn.disabled = true;
-      submitBtn.textContent = 'Надсилаємо...';
-
-      const eventId = `purchase_${Date.now()}_${Math.random().toString(16).slice(2)}`;
-      const payload = { currency: 'UAH', value: 1199, content_name: 'Жіночий костюм 2-в-1' };
-
-      trackEvent('Lead', { content_name: 'Форма замовлення' }, { eventID: `${eventId}_lead` });
-      trackEvent('Purchase', payload, { eventID: eventId });
-
-      sessionStorage.setItem('pendingPurchaseEvent', JSON.stringify({ eventId, payload, createdAt: Date.now() }));
-
-      const redirectUrl = new URL(form.getAttribute('action'), window.location.href);
-      redirectUrl.searchParams.set('eid', eventId);
-      redirectUrl.searchParams.set('value', String(payload.value));
-      redirectUrl.searchParams.set('currency', payload.currency);
-
-      setTimeout(() => {
-        window.location.href = redirectUrl.toString();
-      }, 900);
-    });
-  </script>
 </body>
 </html>

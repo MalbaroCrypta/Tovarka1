@@ -1,96 +1,50 @@
-
-<html>
-<head><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><title>Спасибо!</title>
-<link type="text/css" rel="stylesheet" href="../../borderStyle.css">
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '368235498628394');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=368235498628394&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Дякуємо за замовлення</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      font-family: Inter, Arial, sans-serif;
+      background: #0b1220;
+      color: #eef2ff;
+      padding: 16px;
+    }
+    .box {
+      width: min(100%, 560px);
+      border: 1px solid #263148;
+      border-radius: 22px;
+      padding: 22px;
+      text-align: center;
+      background: #111a2c;
+    }
+    h1 { margin: 0 0 8px; }
+    p { margin: 0; color: #9aa8c7; }
+    a {
+      margin-top: 16px;
+      display: inline-flex;
+      width: 100%;
+      min-height: 52px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 14px;
+      text-decoration: none;
+      font-weight: 700;
+      color: #03131b;
+      background: linear-gradient(135deg, #59f3b3, #37d7ff);
+    }
+  </style>
 </head>
-
-<body background="fon.jpg" style="color: rgb(0, 0, 0); max-width: 980px; min-width: 300px; width: auto; margin: 0px auto; background-color: rgb(255, 255, 255); font-family: pt sans,arial;">
-<br>
-
-
-<p>
-	<img src="tel.jpg" style="display: block; margin: auto; width: 200px; height: 200px;" /></p>
-<div class="wrap_block_success">
-	<div class="block_success">
-		<h2 style="text-align: center;">
-			<span style="font-size:36px;">ПОЗДРАВЛЯЕМ! Ваша заявка принята и поставлена в очередь!<br />
-			</span></h2>
-		<p class="success" style="text-align: center;">
-			<span style="font-size:16px;">Включите свой телефон, чтобы мы могли с Вами связаться!</span></p>
-		<h1 style="color: rgb(255, 0, 0); text-align: center;">
-			<span style="font-size:36px;"></span></h1>
-	</div>
-</div>
-<p>
-	</p>
-<style>
-a.button24 {
-  display: inline-block;
-  color: white;
-  text-decoration: none;
-  padding: .5em 2em;
-  outline: none;
-  border-width: 2px 0;
-  border-style: solid none;
-  border-color: #FDBE33 #000 #D77206;
-  border-radius: 6px;
-  background: linear-gradient(#F3AE0F, #E38916) #E38916;
-  transition: 0.2s;
-  margin: 0 auto;
-position: relative; 
- text-align: center;
-    white-space: normal;
-    width: auto;
-    display: table;
-    margin: 0 auto;
-} 
-a.button24:hover { background: linear-gradient(#f5ae00, #f59500) #f5ae00; }
-a.button24:active { background: linear-gradient(#f59500, #f5ae00) #f59500; }
-</style>
-<a href="./index.html" class="button24">Вернуться на сайт</a>
-
-<br><br><br><br><br>
-
-<!-- ниже код метрики (для отслеживания конверсии) -->
-
-<style>
-.hover:hover {
-	background:#9FD083 !important;
-	transition:all .3s ease-in-out;
-}
-</style>
-<script>
-
-  fbq('track', 'Purchase', {
-
-    value: 12,
-
-    currency: 'USD',
-
-    content_ids: ['0028'],
-
-    content_type: 'product'
-,
-  });
-
-</script>
+<body>
+  <section class="box">
+    <h1>Дякуємо! Заявку прийнято.</h1>
+    <p>Будь ласка, тримайте телефон поруч. Ми скоро зателефонуємо для підтвердження замовлення.</p>
+    <a href="index.html">Повернутися на сайт</a>
+  </section>
 </body>
 </html>

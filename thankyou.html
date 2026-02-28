@@ -4,28 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Замовлення підтверджено</title>
-
-  <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1655876945542323');
-    fbq('track', 'PageView');
-  </script>
-  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1655876945542323&ev=PageView&noscript=1" alt="" /></noscript>
-
   <style>
     :root {
-      --bg: #f4f7ff;
-      --text: #101828;
-      --muted: #667085;
-      --line: #e2e8f2;
-      --accent: #ff6b2c;
+      --bg: #080b12;
+      --card: #121a2b;
+      --line: #27324a;
+      --text: #f7f9ff;
+      --muted: #9aa8c7;
+      --accent: #59f3b3;
+      --accent-2: #37d7ff;
     }
     * { box-sizing: border-box; }
     body {
@@ -33,77 +20,57 @@
       min-height: 100vh;
       display: grid;
       place-items: center;
-      background: radial-gradient(circle at top right, #fff3ee, transparent 35%), var(--bg);
-      font-family: Inter, Manrope, system-ui, sans-serif;
+      padding: 16px;
+      font-family: Inter, Manrope, system-ui, -apple-system, sans-serif;
+      background: radial-gradient(circle at 20% 0, #10203f 0%, transparent 40%), var(--bg);
       color: var(--text);
-      padding: 18px;
     }
     .box {
       width: min(100%, 620px);
-      background: #fff;
       border: 1px solid var(--line);
-      border-radius: 28px;
-      padding: 24px;
-      box-shadow: 0 16px 40px rgba(16,24,40,.1);
+      border-radius: 24px;
+      background: linear-gradient(180deg, #111a2c, #0d1422);
+      padding: 22px;
       text-align: center;
     }
     .mark {
       width: 74px;
       height: 74px;
-      border-radius: 50%;
       margin: 0 auto 14px;
+      border-radius: 50%;
       display: grid;
       place-items: center;
       font-size: 34px;
-      background: #e8fff1;
-      color: #0f8e4b;
+      color: #03131b;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
     }
-    h1 { margin: 0 0 8px; font-size: clamp(28px, 8vw, 42px); line-height: 1.1; }
+    h1 { margin: 0 0 8px; line-height: 1.15; font-size: clamp(28px, 8vw, 40px); }
     p { margin: 0; color: var(--muted); }
-    .timer-wrap {
-      margin-top: 18px;
-      border: 1px solid #ffd7c7;
-      border-radius: 18px;
-      background: #fff8f5;
-      padding: 14px;
-    }
-    .timer-label { font-weight: 700; color: #b14110; }
-    .timer {
-      font-size: clamp(34px, 10vw, 52px);
-      font-weight: 800;
-      margin-top: 4px;
-      color: #8b2e09;
-      line-height: 1;
-    }
     .meta {
       margin-top: 16px;
       display: grid;
       gap: 8px;
       text-align: left;
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      padding: 12px;
     }
-    .meta div { color: #344054; }
-    .actions { margin-top: 18px; display: grid; gap: 10px; }
-    a {
+    .meta div {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 10px 12px;
+      background: #0f1829;
+    }
+    .btn {
       display: inline-flex;
       justify-content: center;
       align-items: center;
-      min-height: 52px;
+      width: 100%;
+      min-height: 54px;
+      border: 0;
+      margin-top: 16px;
       border-radius: 14px;
       text-decoration: none;
       font-weight: 800;
-      padding: 12px;
-    }
-    .btn-main {
-      color: #fff;
-      background: linear-gradient(135deg, #ff6b2c, #ff8e5e);
-    }
-    .btn-light {
-      color: #344054;
-      background: #fff;
-      border: 1px solid var(--line);
+      color: #03131b;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
     }
   </style>
 </head>
@@ -111,58 +78,13 @@
   <section class="box">
     <div class="mark">✓</div>
     <h1>Замовлення підтверджено</h1>
-    <p>Дякуємо! Ваш запит успішно отримано. Перевірте телефон — менеджер зв'яжеться з вами для уточнення деталей.</p>
-
-    <div class="timer-wrap">
-      <div class="timer-label">Менеджер зв'яжеться з вами протягом 15 хв</div>
-      <div class="timer" id="managerTimer">15:00</div>
-    </div>
-
+    <p>Дякуємо! Менеджер зв'яжеться з вами найближчим часом для уточнення деталей.</p>
     <div class="meta">
-      <div><strong>Статус:</strong> прийнято в обробку</div>
       <div><strong>Оплата:</strong> при отриманні</div>
-      <div><strong>Доставка:</strong> 1–3 дні по Україні</div>
+      <div><strong>Доставка:</strong> 1-3 дні по Україні</div>
+      <div><strong>Гарантія:</strong> 14 днів</div>
     </div>
-
-    <div class="actions">
-      <a class="btn-main" href="index.html">Повернутися до каталогу</a>
-      <a class="btn-light" href="tel:+380000000000">Зателефонувати менеджеру</a>
-    </div>
+    <a class="btn" href="index.html">Повернутися на сайт</a>
   </section>
-
-  <script>
-    const trackEvent = (name, data = {}, options = {}) => {
-      if (typeof window.fbq === 'function') {
-        window.fbq('track', name, data, options);
-      }
-    };
-
-    const params = new URLSearchParams(window.location.search);
-    const pendingRaw = sessionStorage.getItem('pendingPurchaseEvent');
-    const pending = pendingRaw ? JSON.parse(pendingRaw) : null;
-    const eventId = params.get('eid') || (pending && pending.eventId);
-    const value = Number(params.get('value') || (pending && pending.payload && pending.payload.value) || 1199);
-    const currency = params.get('currency') || (pending && pending.payload && pending.payload.currency) || 'UAH';
-
-    const key = eventId ? `purchase-confirmed:${eventId}` : '';
-    const alreadyTracked = key ? localStorage.getItem(key) : null;
-
-    if (!alreadyTracked) {
-      trackEvent('Purchase', { value, currency, content_name: 'Жіночий костюм 2-в-1' }, eventId ? { eventID: eventId } : {});
-      if (key) localStorage.setItem(key, String(Date.now()));
-    }
-
-    sessionStorage.removeItem('pendingPurchaseEvent');
-
-    let timeLeft = 15 * 60;
-    const timerNode = document.getElementById('managerTimer');
-
-    setInterval(() => {
-      if (timeLeft > 0) timeLeft -= 1;
-      const mm = String(Math.floor(timeLeft / 60)).padStart(2, '0');
-      const ss = String(timeLeft % 60).padStart(2, '0');
-      timerNode.textContent = `${mm}:${ss}`;
-    }, 1000);
-  </script>
 </body>
 </html>
