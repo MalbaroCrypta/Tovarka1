@@ -1,218 +1,223 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1655876945542323');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1655876945542323&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1655876945542323');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1655876945542323&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Жіночий костюм 2-в-1 — сучасний стиль</title>
-  <meta name="description" content="Жіночий костюм 2-в-1. Оплата при отриманні, доставка 1-3 дні по Україні, гарантія 14 днів." />
+  <title>Жіночий костюм 2-в-1 — преміум стиль</title>
+  <meta name="description" content="Стильний жіночий костюм 2-в-1. WOW-дизайн, оплата при отриманні, доставка 1-3 дні по Україні." />
   <style>
     :root {
-      --bg: #080b12;
-      --bg-soft: #111827;
-      --card: #121a2b;
-      --line: #27324a;
-      --text: #f7f9ff;
-      --muted: #9aa8c7;
-      --accent: #59f3b3;
-      --accent-2: #37d7ff;
+      --bg: #06070f;
+      --bg-soft: #0f1322;
+      --glass: rgba(22, 30, 52, .6);
+      --line: rgba(161, 191, 255, .23);
+      --text: #edf2ff;
+      --muted: #9faad1;
+      --accent: #6d7cff;
+      --accent-2: #27e0ff;
+      --accent-3: #8bffcb;
       --radius-lg: 24px;
-      --radius-md: 18px;
+      --radius-md: 16px;
+      --shadow: 0 24px 60px rgba(5, 9, 20, .55);
     }
 
     * { box-sizing: border-box; }
+    html, body { margin: 0; }
     html { scroll-behavior: smooth; }
     body {
-      margin: 0;
       font-family: Inter, Manrope, system-ui, -apple-system, sans-serif;
-      background: radial-gradient(circle at 20% 0, #10203f 0%, transparent 40%), var(--bg);
       color: var(--text);
       line-height: 1.45;
-      padding-bottom: 96px;
+      background:
+        radial-gradient(circle at 8% 12%, rgba(109,124,255,.25), transparent 36%),
+        radial-gradient(circle at 90% 0%, rgba(39,224,255,.2), transparent 34%),
+        var(--bg);
+      overflow-x: hidden;
+      padding-bottom: 94px;
     }
 
-    img { max-width: 100%; display: block; }
-    .container { width: min(100% - 24px, 1080px); margin-inline: auto; }
-    .section { padding: 18px 0; }
+    .ambient {
+      position: fixed;
+      inset: -20vh -10vw;
+      z-index: -1;
+      pointer-events: none;
+      background:
+        radial-gradient(34vw 34vw at 15% 18%, rgba(109,124,255,.22), transparent 70%),
+        radial-gradient(26vw 26vw at 82% 24%, rgba(39,224,255,.15), transparent 72%),
+        radial-gradient(30vw 30vw at 52% 84%, rgba(139,255,203,.12), transparent 75%);
+      filter: blur(12px);
+      transform: translate3d(0,0,0);
+    }
 
-    .card {
+    .container { width: min(100% - 24px, 1140px); margin-inline: auto; }
+    .section { padding: 34px 0; }
+
+    .glass {
+      background: linear-gradient(130deg, rgba(14,19,33,.72), rgba(17,24,42,.44));
+      backdrop-filter: blur(14px);
       border: 1px solid var(--line);
-      background: linear-gradient(180deg, #111a2c, #0d1422);
       border-radius: var(--radius-lg);
-      padding: 18px;
+      box-shadow: var(--shadow);
     }
 
-    .fade {
-      opacity: 0;
-      transform: translateY(16px);
-      animation: fadeInUp .7s ease forwards;
-    }
-    .delay-1 { animation-delay: .12s; }
-    .delay-2 { animation-delay: .24s; }
-    .delay-3 { animation-delay: .36s; }
-
-    @keyframes fadeInUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    .hero {
+      min-height: 95vh;
+      display: grid;
+      align-items: center;
+      position: relative;
     }
 
-    h1, h2, h3 { margin: 0 0 10px; line-height: 1.15; }
-    h1 { font-size: clamp(30px, 8.5vw, 48px); }
-    h2 { font-size: clamp(24px, 6.8vw, 34px); }
-    p { margin: 0; color: var(--muted); }
+    .hero-wrap {
+      display: grid;
+      gap: 20px;
+      padding: 20px;
+    }
 
+    .hero-copy { padding: 10px; }
     .badge {
       display: inline-flex;
-      padding: 8px 12px;
+      padding: 8px 14px;
       border-radius: 999px;
-      background: rgba(89, 243, 179, .16);
-      color: var(--accent);
       font-size: 12px;
       font-weight: 700;
-      margin-bottom: 12px;
+      letter-spacing: .06em;
+      color: #d7edff;
+      background: linear-gradient(90deg, rgba(109,124,255,.36), rgba(39,224,255,.26));
+      border: 1px solid rgba(191,226,255,.32);
+      margin-bottom: 14px;
     }
 
-    .hero-photo {
-      margin-top: 14px;
-      border-radius: 18px;
-      overflow: hidden;
-      border: 1px solid var(--line);
-    }
-    .hero-photo img { aspect-ratio: 4/5; object-fit: cover; width: 100%; }
+    h1, h2, h3 { margin: 0 0 12px; line-height: 1.12; }
+    h1 { font-size: clamp(34px, 7vw, 62px); letter-spacing: -.02em; }
+    h2 { font-size: clamp(25px, 4.1vw, 40px); }
+    p { margin: 0; color: var(--muted); }
 
-    .price {
-      margin: 14px 0;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      flex-wrap: wrap;
+    .price { margin: 18px 0; display: flex; gap: 12px; align-items: end; }
+    .price strong {
+      font-size: clamp(34px, 6vw, 52px);
+      color: #fff;
+      text-shadow: 0 0 28px rgba(139,255,203,.28);
     }
-    .price strong { font-size: 34px; color: var(--accent); }
-    .old { text-decoration: line-through; color: #7f8fb3; }
+    .price .old { text-decoration: line-through; opacity: .7; }
 
     .btn {
+      --btn-bg: linear-gradient(120deg, var(--accent), var(--accent-2), var(--accent-3));
       display: inline-flex;
-      justify-content: center;
       align-items: center;
-      width: 100%;
+      justify-content: center;
+      gap: 8px;
       min-height: 58px;
+      width: 100%;
       border: 0;
-      border-radius: 16px;
-      background: linear-gradient(135deg, var(--accent), var(--accent-2));
-      color: #03131b;
-      text-decoration: none;
+      border-radius: 15px;
+      background: var(--btn-bg);
+      background-size: 180% 180%;
+      color: #041119;
       font: inherit;
       font-weight: 800;
+      text-decoration: none;
       cursor: pointer;
-      transition: transform .2s ease;
+      transition: transform .25s ease, box-shadow .25s ease;
+      animation: gradientFlow 8s ease infinite;
+      box-shadow: 0 16px 34px rgba(41, 161, 255, .35);
     }
-    .btn:active { transform: scale(.98); }
+    .btn:hover { transform: translateY(-2px) scale(1.01); }
+    .btn:active { transform: translateY(0) scale(.99); }
 
-    .grid,
-    .reviews,
-    .faq-list { display: grid; gap: 12px; }
-
-    .benefit {
-      border-radius: var(--radius-md);
+    .hero-visual {
+      position: relative;
+      perspective: 1000px;
+    }
+    .hero-main {
+      border-radius: 24px;
+      overflow: hidden;
       border: 1px solid var(--line);
-      padding: 14px;
-      background: #0f1829;
+      transform-style: preserve-3d;
+      transform: rotateY(-6deg) rotateX(4deg);
+      transition: transform .35s ease;
     }
-    .benefit strong { display: block; margin-bottom: 4px; }
+    .hero-main img { width: 100%; aspect-ratio: 4/5; object-fit: cover; }
+    .hero-main:hover { transform: rotateY(-2deg) rotateX(1deg) translateY(-4px); }
 
-    .trust {
-      text-align: center;
-      padding: 22px 16px;
-      background: linear-gradient(145deg, rgba(89,243,179,.16), rgba(55,215,255,.08));
+    .floating-card {
+      position: absolute;
+      right: -8px;
+      bottom: 8%;
+      width: 170px;
+      border-radius: 16px;
+      padding: 10px;
+      border: 1px solid var(--line);
+      background: rgba(10,16,30,.78);
+      backdrop-filter: blur(8px);
+      animation: floatY 5s ease-in-out infinite;
     }
-    .trust strong {
-      display: block;
-      font-size: clamp(30px, 9vw, 46px);
-      color: var(--accent);
-      margin-bottom: 4px;
+    .floating-card strong { display: block; font-size: 20px; color: var(--accent-3); }
+    .floating-card span { font-size: 13px; color: #cfdbff; }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px) scale(.98);
+      transition: opacity .65s ease, transform .65s ease;
     }
+    .reveal.show { opacity: 1; transform: translateY(0) scale(1); }
+
+    .stats,
+    .benefits,
+    .gallery,
+    .reviews,
+    .faq-list { display: grid; gap: 14px; }
+
+    .stat,
+    .benefit,
+    .review,
+    .faq-item,
+    .order-box { padding: 16px; border-radius: var(--radius-md); border: 1px solid var(--line); background: var(--glass); }
+
+    .stat strong { display: block; font-size: clamp(24px, 4vw, 40px); color: var(--accent-3); }
+    .benefit strong { display: block; margin-bottom: 6px; color: #f5f8ff; }
 
     .gallery img,
-    .product-main {
-      border-radius: 18px;
-      border: 1px solid var(--line);
-      object-fit: cover;
-    }
-    .gallery img { aspect-ratio: 3/4; width: 100%; }
-    .product-main { aspect-ratio: 1/1; width: 100%; margin-bottom: 10px; }
+    .product-main { border-radius: 18px; border: 1px solid var(--line); object-fit: cover; width: 100%; }
+    .product-main { aspect-ratio: 16/10; margin-bottom: 10px; }
+    .gallery img { aspect-ratio: 4/5; }
 
-    .review {
-      border-radius: 20px;
-      border: 1px solid var(--line);
-      background: #0f1829;
-      padding: 14px;
-    }
-    .review-head {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 8px;
-    }
-    .avatar {
-      width: 52px;
-      height: 52px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 2px solid #283654;
-    }
-
-    .pill-list {
-      margin-top: 10px;
-      display: grid;
-      gap: 8px;
-    }
-    .pill {
-      border-radius: 14px;
-      border: 1px solid var(--line);
-      background: #0f1829;
-      padding: 10px 12px;
-      font-weight: 600;
-    }
+    .review-head { display: flex; align-items: center; gap: 10px; margin-bottom: 9px; }
+    .avatar { width: 52px; height: 52px; border-radius: 50%; object-fit: cover; border: 2px solid rgba(191,226,255,.45); }
 
     form { display: grid; gap: 10px; margin-top: 12px; }
     input {
       width: 100%;
-      border-radius: 14px;
-      border: 1px solid #32405e;
       min-height: 50px;
-      padding: 12px;
-      background: #0b1322;
+      border-radius: 12px;
+      border: 1px solid rgba(161,191,255,.35);
+      background: rgba(7,10,20,.68);
       color: var(--text);
       font: inherit;
-      outline: 0;
-    }
-    input:focus { border-color: var(--accent); }
-
-    .faq-item {
-      border-radius: 16px;
-      border: 1px solid var(--line);
       padding: 12px;
-      background: #0f1829;
+      outline: 0;
+      transition: border-color .2s ease, box-shadow .2s ease;
+    }
+    input:focus {
+      border-color: var(--accent-2);
+      box-shadow: 0 0 0 3px rgba(39,224,255,.18);
     }
 
     .sticky {
@@ -220,79 +225,96 @@ src="https://www.facebook.com/tr?id=1655876945542323&ev=PageView&noscript=1"
       left: 8px;
       right: 8px;
       bottom: 8px;
-      z-index: 30;
+      z-index: 35;
       padding: 8px;
       border-radius: 18px;
-      border: 1px solid #23304c;
-      background: rgba(10, 16, 28, .94);
+      border: 1px solid rgba(151, 189, 255, .26);
+      background: rgba(8, 12, 24, .85);
       backdrop-filter: blur(8px);
     }
 
     footer {
-      padding: 14px 0 110px;
+      padding: 20px 0 110px;
       text-align: center;
-      color: #7f8fb3;
+      color: #97a4cc;
       font-size: 14px;
     }
-    footer a { color: #aab8d8; text-decoration: none; }
+    footer a { color: #bccaf0; text-decoration: none; }
 
-    @media (min-width: 760px) {
-      body { padding-bottom: 24px; }
+    @keyframes gradientFlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    @keyframes floatY {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    @media (min-width: 820px) {
+      body { padding-bottom: 28px; }
       .hero-wrap,
-      .two-col,
+      .stats,
+      .benefits,
       .reviews,
-      .gallery,
       .faq-list { grid-template-columns: 1fr 1fr; }
-      .hero-wrap { display: grid; gap: 16px; align-items: center; }
+      .hero-wrap { padding: 28px; align-items: center; }
       .gallery { grid-template-columns: repeat(4, 1fr); }
       .sticky { display: none; }
     }
 
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after { animation: none !important; transition: none !important; }
+      .reveal { opacity: 1; transform: none; }
     }
   </style>
 </head>
 <body>
-  <header class="section">
+  <div class="ambient" data-parallax="0.08"></div>
+
+  <header class="hero">
     <div class="container">
-      <div class="card hero-wrap fade">
-        <div>
-          <span class="badge">НОВИЙ ДИЗАЙН 2026</span>
-          <h1>Жіночий костюм 2-в-1 для щоденного стильного образу</h1>
-          <p>М'яка тканина, зручна посадка та сучасний крій. Оплата при отриманні та доставка 1-3 дні по Україні.</p>
+      <div class="hero-wrap glass reveal">
+        <div class="hero-copy">
+          <span class="badge">TREND DROP 2026</span>
+          <h1>Жіночий костюм 2-в-1 — дизайн, який закохує з першого погляду</h1>
+          <p>Той самий wow-ефект, який ти хотіла: сучасний силует, комфортна тканина і посадка, що підкреслює фігуру.</p>
           <div class="price">
             <strong>1199 грн</strong>
             <span class="old">1712 грн</span>
           </div>
-          <a class="btn" href="#order">Замовити</a>
+          <a class="btn" href="#order">🔥 Замовити зараз</a>
         </div>
-        <div class="hero-photo">
-          <img src="1/1.jpg" alt="Жіночий костюм 2-в-1" loading="eager" />
+        <div class="hero-visual" data-parallax="0.14">
+          <div class="hero-main">
+            <img src="1/1.jpg" alt="Жіночий костюм 2-в-1" loading="eager" />
+          </div>
+          <div class="floating-card"><strong>10 000+</strong><span>задоволених клієнтів</span></div>
         </div>
       </div>
     </div>
   </header>
 
   <main class="container">
-    <section class="section fade delay-1">
-      <div class="card trust">
-        <strong>10 000+</strong>
-        <p>Нам довіряють 10 000+ клієнтів по всій Україні.</p>
+    <section class="section reveal">
+      <h2>Чому цей костюм всі хочуть</h2>
+      <div class="stats">
+        <article class="stat"><strong>14 днів</strong><p>гарантія обміну або повернення без зайвих питань.</p></article>
+        <article class="stat"><strong>1-3 дні</strong><p>швидка доставка по Україні з оплатою при отриманні.</p></article>
       </div>
     </section>
 
-    <section class="section fade delay-1">
+    <section class="section reveal">
       <h2>Переваги</h2>
-      <div class="grid">
-        <article class="benefit"><strong>Сучасний стиль 2026</strong><p>Актуальний крій, який підходить на кожен день.</p></article>
-        <article class="benefit"><strong>Комфортна тканина</strong><p>М'яка, щільна та приємна до тіла.</p></article>
-        <article class="benefit"><strong>Легкий догляд</strong><p>Після прання зберігає форму та колір.</p></article>
-        <article class="benefit"><strong>Універсальний комплект</strong><p>Можна носити разом або окремо.</p></article>
+      <div class="benefits">
+        <article class="benefit"><strong>Преміум look</strong><p>Дизайн у стилі топових fashion-сторінок та актуальні кольори.</p></article>
+        <article class="benefit"><strong>Комфорт 24/7</strong><p>Тканина приємна до тіла, не сковує рухи, тримає форму.</p></article>
+        <article class="benefit"><strong>Універсальний комплект</strong><p>Носи разом або окремо — під офіс, зустріч, подорож чи прогулянку.</p></article>
+        <article class="benefit"><strong>Легкий догляд</strong><p>Після прання колір та крій залишаються як нові.</p></article>
       </div>
     </section>
 
-    <section class="section fade delay-2">
+    <section class="section reveal">
       <h2>Фото товару</h2>
       <img class="product-main" src="2/1.jpg" alt="Фото костюма крупним планом" loading="lazy" />
       <div class="gallery">
@@ -303,79 +325,37 @@ src="https://www.facebook.com/tr?id=1655876945542323&ev=PageView&noscript=1"
       </div>
     </section>
 
-    <section class="section fade delay-2">
-      <h2>Відгуки з фото</h2>
+    <section class="section reveal">
+      <h2>Відгуки</h2>
       <div class="reviews">
         <article class="review">
-          <div class="review-head">
-            <img class="avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=300&q=80" alt="Олена" loading="lazy" />
-            <div><strong>Олена, Київ</strong><p>★★★★★</p></div>
-          </div>
-          <p>Костюм сів ідеально. Дуже комфортний і виглядає дорожче за свою ціну.</p>
+          <div class="review-head"><img class="avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=300&q=80" alt="Олена" loading="lazy" /><div><strong>Олена, Київ</strong><p>★★★★★</p></div></div>
+          <p>Виглядає дуже дорого. Подруги питають, де взяла 🔥</p>
         </article>
         <article class="review">
-          <div class="review-head">
-            <img class="avatar" src="https://images.unsplash.com/photo-1525134479668-1bee5c7c6845?auto=format&fit=crop&w=300&q=80" alt="Ірина" loading="lazy" />
-            <div><strong>Ірина, Львів</strong><p>★★★★★</p></div>
-          </div>
-          <p>Замовила після відгуків і не пошкодувала. Доставка прийшла за 2 дні.</p>
-        </article>
-        <article class="review">
-          <div class="review-head">
-            <img class="avatar" src="https://images.unsplash.com/photo-1554151228-14d9def656e4?auto=format&fit=crop&w=300&q=80" alt="Марія" loading="lazy" />
-            <div><strong>Марія, Вінниця</strong><p>★★★★★</p></div>
-          </div>
-          <p>Приємна тканина, гарний пошив. Ношу і в офіс, і на прогулянку.</p>
-        </article>
-        <article class="review">
-          <div class="review-head">
-            <img class="avatar" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80" alt="Світлана" loading="lazy" />
-            <div><strong>Світлана, Одеса</strong><p>★★★★★</p></div>
-          </div>
-          <p>Все як на фото. Сподобалось, що є гарантія 14 днів і оплата при отриманні.</p>
+          <div class="review-head"><img class="avatar" src="https://images.unsplash.com/photo-1525134479668-1bee5c7c6845?auto=format&fit=crop&w=300&q=80" alt="Ірина" loading="lazy" /><div><strong>Ірина, Львів</strong><p>★★★★★</p></div></div>
+          <p>Якість просто топ, прийшов швидко, сів ідеально.</p>
         </article>
       </div>
     </section>
 
-    <section class="section fade delay-3">
-      <h2>Гарантія</h2>
-      <div class="card">
-        <p>Ми даємо гарантію 14 днів на обмін або повернення.</p>
-        <div class="pill-list">
-          <div class="pill">✅ Оплата при отриманні</div>
-          <div class="pill">🚚 Доставка 1-3 дні по Україні</div>
-          <div class="pill">🛡️ Гарантія 14 днів</div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section fade delay-3" id="order">
-      <h2>Форма замовлення</h2>
-      <div class="card">
-        <p>Заповніть дані, і менеджер зв'яжеться з вами для підтвердження.</p>
+    <section class="section reveal" id="order">
+      <h2>Оформити замовлення</h2>
+      <div class="order-box">
+        <p>Заповни форму — менеджер швидко зв'яжеться і підтвердить деталі.</p>
         <form action="thankyou.html" method="get">
           <input type="text" name="name" placeholder="Ім'я" required />
           <input type="tel" name="phone" placeholder="Телефон" required />
-          <button class="btn" type="submit">Замовити</button>
+          <button class="btn" type="submit">💫 Отримати зі знижкою</button>
         </form>
       </div>
     </section>
 
-    <section class="section fade delay-3">
+    <section class="section reveal">
       <h2>FAQ</h2>
       <div class="faq-list">
-        <article class="faq-item"><h3>Як швидко відправляєте?</h3><p>Відправка щодня, доставка 1-3 дні по Україні.</p></article>
-        <article class="faq-item"><h3>Чи можна оплатити при отриманні?</h3><p>Так, оплата при отриманні у відділенні або кур'єру.</p></article>
-        <article class="faq-item"><h3>Якщо не підійде розмір?</h3><p>Протягом 14 днів допоможемо з обміном або поверненням.</p></article>
-        <article class="faq-item"><h3>Як зі мною зв'яжуться?</h3><p>Після заявки менеджер передзвонить для підтвердження замовлення.</p></article>
-      </div>
-    </section>
-
-    <section class="section fade delay-3">
-      <div class="card">
-        <h2>Готові оновити гардероб?</h2>
-        <p>Оформіть замовлення зараз та отримайте стильний костюм вже за кілька днів.</p>
-        <div style="margin-top:12px;"><a class="btn" href="#order">Замовити</a></div>
+        <article class="faq-item"><h3>Як швидко відправляєте?</h3><p>Щодня, доставка 1-3 дні по Україні.</p></article>
+        <article class="faq-item"><h3>Чи є оплата при отриманні?</h3><p>Так, оплата при отриманні у відділенні або кур'єру.</p></article>
       </div>
     </section>
   </main>
@@ -385,7 +365,31 @@ src="https://www.facebook.com/tr?id=1655876945542323&ev=PageView&noscript=1"
   </footer>
 
   <div class="sticky">
-    <a class="btn" href="#order">Замовити</a>
+    <a class="btn" href="#order">🔥 Замовити</a>
   </div>
+
+  <script>
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    reveals.forEach((item) => observer.observe(item));
+
+    const parallaxEls = document.querySelectorAll('[data-parallax]');
+    const onScroll = () => {
+      const y = window.scrollY;
+      parallaxEls.forEach((el) => {
+        const speed = Number(el.dataset.parallax || 0);
+        el.style.transform = `translate3d(0, ${y * speed}px, 0)`;
+      });
+    };
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+  </script>
 </body>
 </html>
